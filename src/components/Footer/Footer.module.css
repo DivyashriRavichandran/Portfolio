@@ -1,0 +1,39 @@
+@import "../../vars.css";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  color: var(--color-text);
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%; /* Same padding as the footer */
+  width: 80%; /* Adjust the width as needed */
+  border-top: 2px solid var(--color-text); /* The line */
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.right {
+  display: flex;
+  gap: 20px; /* Space between icons */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Enlarge the icon on hover */
+}

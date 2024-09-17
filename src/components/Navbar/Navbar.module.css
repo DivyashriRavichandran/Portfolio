@@ -1,0 +1,129 @@
+@import "../../vars.css";
+
+/* Navbar container */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Navbar content */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 10%; 
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/* Menu container */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu items */
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
+.menuItems a {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.menuItems a:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  color: orange;
+  text-shadow: 0 0 5px rgb(248, 184, 64); /* Glow effect on hover */
+}
+
+/* Toggle button for dark/light mode */
+.toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 70px; 
+}
+
+.toggleIcon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.toggleButton:hover .toggleIcon {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 830px) {
+  /* Adjusting layout for mobile */
+  .navbar-inner {
+    flex-direction: column; /* Stack the title and menu vertically */
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 20px; /* Add space between the title and the menu */
+    text-align: center;
+    font-size: 24px; /* Reduce title size for smaller screens */
+  }
+
+  .menuItems {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 20px; /* Space between each menu item */
+  }
+
+  .menuItems a {
+    font-size: 20px; /* Reduce font size for menu items */
+    text-align: center;
+  }
+}
+
+/* Further adjustment for very small screens */
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 20px;
+    align-self: flex-start;  
+  }
+
+  .menuItems {
+    gap: 15px; /* Reduce the gap further */
+    align-self: flex-end; 
+  }
+
+  .menuItems a {
+    font-size: 18px; /* Reduce font size for small screens */
+    margin-right: 0;
+    align-self: flex-end; 
+  }
+
+  .toggleButton {
+    margin-right: 0;
+  }
+
+  .toggleIcon {
+    width: 20px;
+    height: 20px;
+  }
+}

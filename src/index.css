@@ -1,0 +1,22 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Krona One', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none; 
+}
+body {
+  cursor: none; 
+}
+/*
+@font-face {
+  font-family: "ClashDisplay";
+  src: local("ClashDisplay"),
+    url("./fonts/Archivo-Regular.otf") format("opentype");
+  font-weight: normal;
+}*/
