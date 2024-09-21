@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Brushchetta's",
+    "imageSrc": "projects/project1.png",
+    "description":"Restaurant website featuring dining menus, details about the establishment and a reservation system.",
+    "skills": [
+      { "title": "HTML", "imageSrc": "projects/html.png" },
+      { "title": "CSS", "imageSrc": "projects/css.png" }
+    ],
+    "demo": "https://bruschettas-restaurant.netlify.app/",
+    "source": "https://github.com/DivyashriRavichandran/Bruschetta-Restaurant"
+  },
+  {
+    "title": "FitRoutine",
+    "imageSrc": "projects/project2.png",
+    "description": "Fitness app that customizes workout routine based on the user’s fitness level and area of workout.",
+    "skills": [
+      { "title": "HTML", "imageSrc": "projects/html.png" },
+      { "title": "Bootstrap", "imageSrc": "projects/bootstrap.png" },
+      { "title": "JS", "imageSrc": "projects/js.png" }
+    ],
+    "demo": "fit-routine.netlify.app",
+    "source": "https://github.com/DivyashriRavichandran/FitRoutine"
+  },
+  {
+    "title": "MovieQuest",
+    "imageSrc": "projects/project3.png",
+    "description": "Movie database app that allows users to find movie information and trailers - all at one place.",
+    "skills": [
+      { "title": "React.js", "imageSrc": "projects/react.png" },
+      { "title": "SaSS", "imageSrc": "projects/sass.png" },
+      { "title": "npm", "imageSrc": "projects/npm.png" }
+    ],
+    "demo": "https://moviequest-app.netlify.app/",
+    "source": "https://github.com/DivyashriRavichandran/MovieQuest"
+  }
+]
