@@ -58,9 +58,10 @@ export const Projects = () => {
           </div>
 
             <div className={styles.projectLinks}>
-                <a href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href={project.source} target="_blank" rel="noopener noreferrer">Source Code</a>
+              <a href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href={project.source} target="_blank" rel="noopener noreferrer">Source Code</a>
             </div>
+
           </div>
         </motion.div>
       ))}

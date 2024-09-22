@@ -41,7 +41,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.left}>
-        <p className={styles.text}>© 2024 Divyashri Ravichandran. All Rights Reserved.</p>
+        <p className={styles.text}>Copyright © 2024 Divyashri. All Rights Reserved.</p>
       </div>
       <div className={styles.right}>
         <a

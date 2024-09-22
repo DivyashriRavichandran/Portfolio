@@ -1,15 +1,15 @@
-@import "../../vars.css";
-
 /* Navbar container */
 .navbar {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 5%;
+  padding-top: 3%;
   padding-bottom: 3%;
   width: 100vw;
   margin: 0;
+  box-shadow: 0 8px 16px var(--nav-color);
+  background-color: var(--nav-bar-color);
 }
 
 /* Navbar content */
@@ -18,14 +18,20 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0 10%; 
+  margin: 0 10%;
 }
 
+/* Title */
 .title {
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
-  color: var(--color-text);
+  color: transparent; /* Makes the text transparent */
+  background: var(--hero-color); /* Apply your gradient */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* For other browsers */
+  display: flex;
+  align-items: center;
 }
 
 /* Menu container */
@@ -37,7 +43,7 @@
 /* Menu items */
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 50px;
   list-style: none;
 }
 
@@ -52,8 +58,11 @@
 
 .menuItems a:hover {
   transform: scale(1.1); /* Enlarge on hover */
-  color: orange;
-  text-shadow: 0 0 5px rgb(248, 184, 64); /* Glow effect on hover */
+  color: transparent; /* Makes the text transparent */
+  background: var(--hero-color); /* Apply your gradient */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text; /* For other browsers */
+  text-shadow: 0 0 5px var(--cursor-color); /* Adjust shadow color from your gradient */
 }
 
 /* Toggle button for dark/light mode */
@@ -62,7 +71,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-right: 70px; 
+  padding-right: 50px; /* Add space between title and toggle */
 }
 
 .toggleIcon {
@@ -75,55 +84,153 @@
   transform: scale(1.2); /* Enlarge on hover */
 }
 
+@media screen and (max-width: 1100px) {
+  .toggleButton {
+    padding-left: 40px; /* Space between toggle and menu items */
+  }
+  .toggleIcon{
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
 /* Responsive Design */
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1100px) {
   /* Adjusting layout for mobile */
   .navbar-inner {
-    flex-direction: column; /* Stack the title and menu vertically */
+    flex-direction: column; /* Stack title, toggle, and menu vertically */
     align-items: center;
+    width: 100%;
+    padding: 0 10px; /* Adjust padding to fit screen */
   }
 
   .title {
-    margin-bottom: 20px; /* Add space between the title and the menu */
-    text-align: center;
-    font-size: 24px; /* Reduce title size for smaller screens */
+    font-size: 28px; /* Reduce title size for smaller screens */
+    margin-bottom: 10px; /* Space between title and toggle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggleButton {
+    padding-right: 25px; /* Space between toggle and menu items */
+  }
+  .toggleIcon{
+    width: 30px;
+    height: 30px;
   }
 
   .menuItems {
-    flex-direction: column; /* Stack menu items vertically */
+    flex-direction: row; /* Menu items in a row */
     gap: 20px; /* Space between each menu item */
+    width: 100%;
+    justify-content: center; /* Center the menu items */
+  }
+
+  .menuItems a {
+    font-size: 25px; /* Reduce font size for menu items */
+  }
+}
+@media screen and (max-width: 830px) {
+  /* Adjusting layout for mobile */
+  .navbar-inner {
+    flex-direction: column; /* Stack title, toggle, and menu vertically */
+    align-items: center;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 24px; /* Reduce title size for smaller screens */
+    margin-bottom: 10px; /* Space between title and toggle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggleButton {
+    padding-right: 20px; /* Space between toggle and menu items */
+  }
+  .toggleIcon{
+    width: 25px;
+    height: 25px;
+  }
+
+  .menuItems {
+    flex-direction: row; /* Menu items in a row */
+    gap: 20px; /* Space between each menu item */
+    width: 100%;
+    justify-content: center; /* Center the menu items */
   }
 
   .menuItems a {
     font-size: 20px; /* Reduce font size for menu items */
-    text-align: center;
   }
 }
 
 /* Further adjustment for very small screens */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+  .navbar-inner {
+    flex-direction: column; /* Stack title, toggle, and menu vertically */
+    align-items: center;
+    width: 80%;
+  }
   .title {
     font-size: 20px;
-    align-self: flex-start;  
   }
 
   .menuItems {
-    gap: 15px; /* Reduce the gap further */
-    align-self: flex-end; 
+    gap: 15px; /* Reduce gap between menu items */
   }
 
   .menuItems a {
-    font-size: 18px; /* Reduce font size for small screens */
-    margin-right: 0;
-    align-self: flex-end; 
+    font-size: 18px;
+  }
+  .toggleButton {
+    padding-right: 20px; /* Space between toggle and menu items */
+  }
+  .toggleIcon{
+    width: 20px;
+    height: 20px;
+  }
+}
+/* Further adjustment for very small screens */
+@media screen and (max-width: 430px) {
+  .navbar-inner {
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    padding: 0; 
+    box-sizing: border-box;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px; 
+    text-align: center; 
+  }
+
+  .menuItems {
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px; 
+    justify-content: center; 
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .menuItems a {
+    font-size: 15px;
+    text-align: center; 
   }
 
   .toggleButton {
-    margin-right: 0;
+    display: none; 
   }
 
   .toggleIcon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 }

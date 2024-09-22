@@ -6,17 +6,18 @@ import { motion } from "framer-motion";
 
 export const Skills = () => {
   return (
-    <section className={styles.container} id="Skills">
+    <motion.section
+      className={styles.container}
+      id="Skills"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       {/* Title motion */}
-      <motion.h2
-        className={styles.title}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
+      <h2 className={styles.title}>
         Skills
-      </motion.h2>
+      </h2>
 
       <motion.div
         className={styles.skills}
@@ -38,6 +39,6 @@ export const Skills = () => {
           </div>
         ))}
       </motion.div>
-    </section>
+    </motion.section>
   );
 };

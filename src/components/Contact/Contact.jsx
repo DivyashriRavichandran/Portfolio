@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import styles from "./Contact.module.css";
 import { getImageUrl } from "../../utils";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -34,7 +34,7 @@ export const Contact = () => {
     emailjs.sendForm('service_cd0c2ce', 'template_k856tjf', e.target, 'co1DZTK5qj_ecQZcz')
       .then((result) => {
         console.log('Email sent successfully:', result.text);
-        setSubmitted(true);  
+        setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000); // Reset form after 3 seconds
       }, (error) => {
         console.error('Email sending failed:', error.text);
@@ -50,7 +50,14 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className={styles.container}>
+    <motion.section
+      id="contact"
+      className={styles.container}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       {/* Motion for text container */}
       <motion.div
         className={styles.text}
@@ -69,7 +76,7 @@ export const Contact = () => {
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         <div className={styles.inputGroup}>
@@ -86,7 +93,7 @@ export const Contact = () => {
         </div>
         <button
           type="submit"
-          className={`${styles.submitButton} ${submitted}`}
+          className={`${styles.submitButton} ${submitted ? styles.submitted : ''}`}
         >
           <img
             src={getIconUrl(theme)}
@@ -95,6 +102,6 @@ export const Contact = () => {
           />
         </button>
       </motion.form>
-    </section>
+    </motion.section>
   );
 };

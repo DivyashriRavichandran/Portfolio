@@ -1,9 +1,8 @@
 /* Dark theme */
 :root {
   --color-text: #fff; 
-  
-  background: #1c1c1cfa;
-  background-image: radial-gradient(white 0.8px, transparent 0);
+  background: #181818;
+  background-image: radial-gradient(#4a4a4a 1px, transparent 0);
   background-size: 50px 50px;
   background-position: -10px -10px;
 
@@ -11,20 +10,42 @@
   --color-textbox:rgba(28, 28, 28, 0.980);
   --color-submit: white;
   --font-krona-one: 'Krona One';
-  --cursor-color: rgb(255, 155, 4);
+  --border-color: white;
+  --button-color: black;
+  --glow-color:rgb(176, 255, 39);
+  --box-color:black;
+  --cursor-color:rgb(176, 255, 39);
+  --typer-color: rgb(86, 238, 225); 
+  --skill-color:rgb(30, 30, 30);
+  --footer-color: #b5b5b5;
+  --nav-color:black;
+  --nav-bar-color:rgb(30, 30, 30);
+  --hero-color: linear-gradient(110.8deg, rgb(86, 238, 225) 11.4%, rgb(176, 255, 39) 84.5%);
+
 }
 
 /* Light theme */
 [data-theme='light'] {
   --color-text: #000; 
-  background: rgba(255, 255, 255, 0.980);
-  background-image: radial-gradient(black 1.2px, transparent 0);
+  background: #ffffff;
+  background-image: radial-gradient(rgb(158, 158, 158) 1px, transparent 0);
   background-size: 50px 50px;
   background-position: -10px -10px;
+
   --color-project: #fcfcfc;
   --color-primary: #ffffff1d;
   --color-textbox:rgba(255, 255, 255, 0.980);
   --color-submit: black;
   --font-krona-one: 'Krona One';
-  --cursor-color: orange;
+  --border-color: black;
+  --button-color: white;
+  --glow-color:#fdc4df;
+  --box-color:#fdc4df;;
+  --cursor-color:#FF057C ;
+  --typer-color: #8D0B93;
+  --skill-color:rgba(255, 255, 255, 0.95);
+  --footer-color: #464646; 
+  --nav-color:rgb(215, 215, 215);
+  --nav-bar-color:rgb(250, 250, 250);
+  --hero-color:linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
 }

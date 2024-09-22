@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils"; // Import the getImageUrl function
+import { getImageUrl } from "../../utils"; 
 
 export const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -27,7 +27,7 @@ export const Navbar = () => {
         <div className={styles.menu}>
           <button onClick={toggleDarkMode} className={styles.toggleButton}>
             <img
-              src={getImageUrl(darkMode ? "navbar/moon1.png" : "navbar/sun1.png")}
+              src={getImageUrl(darkMode ? "navbar/moon.png" : "navbar/sun.png")}
               alt={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               className={styles.toggleIcon}
             />
