@@ -36,8 +36,8 @@ export const About = () => {
             from the <span className={styles.name}> University of Leeds, UK. </span> </p>
 
           <p> As a front-end developer, specializing in <span className={styles.name}> React.js, </span> 
-          and have a solid foundation in <span className={styles.name}> HTML, CSS, and JavaScript, </span>
-          I’m eager to apply my skills and grow in new opportunities.
+          with a solid foundation in <span className={styles.name}> HTML, CSS, and JavaScript, </span>
+          I am eager to apply my skills and grow in new opportunities.
           </p>
         </div>
       </div>
