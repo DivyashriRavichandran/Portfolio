@@ -1,4 +1,4 @@
-## Live Website - [divyashri-portfolio.netlify.app](https://divyashri-portfolio.netlify.app/)
+ ## :rocket: Live Website - [divyashri-portfolio.netlify.app](https://divyashri-portfolio.netlify.app/)
 
 This personal portfolio website is developed using React.js and Vite and deployed using Netlify.
 
