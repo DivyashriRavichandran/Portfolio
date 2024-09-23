@@ -6,7 +6,6 @@
   { "title": "SASS", "imageSrc": "skills/sass.png"},
   { "title": "Tailwind", "imageSrc": "skills/tailwind.png"},
   { "title": "Bootstrap", "imageSrc": "skills/bootstrap.png"},
-  { "title": "npm", "imageSrc": "skills/npm.png"},
   { "title": "Python", "imageSrc": "skills/python.png"},
   { "title": "SQL", "imageSrc": "skills/sql.png"},
   { "title": "Git", "imageSrc": "skills/git.png"}

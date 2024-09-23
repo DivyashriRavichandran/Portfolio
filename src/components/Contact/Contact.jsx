@@ -10,7 +10,6 @@ export const Contact = () => {
     document.documentElement.getAttribute("data-theme") || "dark"
   );
 
-  // Listen for theme changes
   useEffect(() => {
     const themeObserver = new MutationObserver(() => {
       const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -29,18 +28,15 @@ export const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Send form data to EmailJS
     emailjs.sendForm('service_cd0c2ce', 'template_k856tjf', e.target, 'co1DZTK5qj_ecQZcz')
       .then((result) => {
         console.log('Email sent successfully:', result.text);
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 3000); // Reset form after 3 seconds
+        setTimeout(() => setSubmitted(false), 3000);
       }, (error) => {
         console.error('Email sending failed:', error.text);
       });
-
-    e.target.reset(); // Clear the form after submission
+    e.target.reset();
   };
 
   const getIconUrl = (theme) => {
@@ -67,7 +63,12 @@ export const Contact = () => {
         viewport={{ once: true }}
       >
         <h2>Contact Me</h2>
-        <p>Feel free to reach out!</p>
+        <p>Get in Touch!</p>
+        <img
+          src={getImageUrl("contact/mail.png")}
+          alt="contact sticker"
+          className={styles.sticker}
+        />
       </motion.div>
 
       {/* Motion for form */}

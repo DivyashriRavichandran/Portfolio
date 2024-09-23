@@ -35,7 +35,7 @@ function App() {
         dimensions={60}
         fill='var(--cursor-color)' // Use the CSS variable for color
         smoothness={{
-          movement: 0.5,
+          movement: 1,
           scale: 0.1,
           opacity: 0.2,
         }}

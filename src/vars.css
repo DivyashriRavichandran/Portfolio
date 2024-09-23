@@ -2,7 +2,7 @@
 :root {
   --color-text: #fff; 
   background: #181818;
-  background-image: radial-gradient(#4a4a4a 1px, transparent 0);
+  background-image: radial-gradient(#2f2f2f 1px, transparent 0);
   background-size: 50px 50px;
   background-position: -10px -10px;
 
@@ -27,8 +27,8 @@
 /* Light theme */
 [data-theme='light'] {
   --color-text: #000; 
-  background: #ffffff;
-  background-image: radial-gradient(rgb(158, 158, 158) 1px, transparent 0);
+  background: rgb(246, 246, 246);
+  background-image: radial-gradient(rgb(176, 176, 176) 1px, transparent 0);
   background-size: 50px 50px;
   background-position: -10px -10px;
 
@@ -46,6 +46,6 @@
   --skill-color:rgba(255, 255, 255, 0.95);
   --footer-color: #464646; 
   --nav-color:rgb(215, 215, 215);
-  --nav-bar-color:rgb(250, 250, 250);
+  --nav-bar-color:rgb(255, 255, 255);
   --hero-color:linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
 }

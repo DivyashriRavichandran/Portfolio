@@ -1,24 +1,25 @@
-@import "../../vars.css";
-
 .container {
-  color: var(--color-text);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 10%;
   padding: 5%;
-
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
   border: 2px solid transparent;
   border-radius: 10px;
-  border-image: var(--hero-color) 1; 
+  border-image: var(--hero-color) 1;
   background-color: var(--skill-color);
   box-shadow: 0 4px 8px var(--glow-color);
-  
+}
 
+.text {
+  width: 50%; /* Adjust width to fit next to the form */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the title and paragraph */
 }
 
 .text h2 {
@@ -31,16 +32,21 @@
 }
 
 .text p {
-  padding-top: 20%;
   font-size: 20px;
   font-weight: 100;
   text-align: center;
   background: var(--hero-color);
-  -webkit-background-clip: text; /* For WebKit browsers */
-  background-clip: text; /* For other browsers */
-  color: transparent; /* Makes the text color transparent */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 5%;
 }
 
+.sticker {
+  margin-top: 10%;
+  width: 200px; 
+  height: auto;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -64,6 +70,7 @@
   font-size: 15px;
   font-weight: 500;
   padding: 5px;
+  color: var(--color-text);
 }
 
 .inputGroup input,
@@ -117,49 +124,46 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
-    gap: 30px;
     text-align: center;
-    justify-content: center;
-
   }
-  .text {
-    font-size: 1.25em;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20%;
-    white-space: nowrap;
-
-  }
-  .text p{
-    font-size: 1em;
-    padding-top: 10%;
-    padding-bottom: 5%;
-    
-  }
-
-  .form {
+  
+  .text, .form {
     width: 100%;
+  }
+  .text p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .sticker {
+    margin-top: 10px;
+    width: 150px;
+    margin-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .container {
     flex-direction: column;
-    gap: 30px;
-
+    text-align: center;
   }
-  .text h2{
+  
+  .text h2 {
     font-size: 1rem;
   }
-  .text p{
-    font-size: 14px;
+  
+  .text p {
+    font-size: 14px; 
+    margin-top: 10px;
   }
 
-  .form {
-    width: 100%;
+  .sticker {
+    margin-top: 10px;
+    width: 120px;
+    margin-bottom: 10px;
   }
+
   .inputGroup label {
     font-size: 14px;
-    padding: 2px;
   }
 }

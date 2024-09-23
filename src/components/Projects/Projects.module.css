@@ -114,26 +114,26 @@
 }
 
 .projectLinks a {
-  color: var(--button-color); /* White text color */
-  background: var(--hero-color); /* Background color */
-  -webkit-background-clip: text; /* For WebKit browsers */
-  background-clip: text; /* For other browsers */
-  color: transparent; /* Makes the text color transparent */
+  color: var(--button-color); 
+  background: var(--hero-color);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 20px; /* Padding inside the button */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  display: inline-block; /* Ensures padding and button-like appearance */
-  text-align: center; /* Center text horizontally */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; 
+  display: inline-block; 
+  text-align: center;
   box-shadow: 0 4px 8px var(--box-color);
 }
 
 .projectLinks a:hover {
-  color: var(--button-color); /* Keeps the text white */
-  background: var(--hero-color); /* Gradient background on hover */
-  box-shadow: 0 0 10px var(--box-color); /* Black glow effect on hover */
-  border-color: var(--hero-color); /* Use the gradient color for the border */
+  color: var(--button-color); 
+  background: var(--hero-color); 
+  box-shadow: 0 0 10px var(--box-color); 
+  border-color: var(--hero-color); 
 }
 
 /* For mobile devices */
@@ -173,7 +173,7 @@
   }
 
   .projectLinks {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; /* Stack links vertically */
     gap: 10px; /* Space between links */
     margin-top: 20px; /* Ensure space above the links */
   }

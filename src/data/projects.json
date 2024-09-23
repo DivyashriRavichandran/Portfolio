@@ -19,7 +19,7 @@
       { "title": "Bootstrap", "imageSrc": "projects/bootstrap.png" },
       { "title": "JS", "imageSrc": "projects/js.png" }
     ],
-    "demo": "fit-routine.netlify.app",
+    "demo": "https://fit-routine.netlify.app/",
     "source": "https://github.com/DivyashriRavichandran/FitRoutine"
   },
   {
