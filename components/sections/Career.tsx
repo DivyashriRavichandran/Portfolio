@@ -10,10 +10,12 @@ import { Doc } from "@/convex/_generated/dataModel";
 import Image from "next/image";
 import {
   addDays,
+  endOfMonth,
   format,
   formatDuration,
   intervalToDuration,
   isValid,
+  startOfMonth,
 } from "date-fns";
 import H4 from "@/components/headings/H4";
 import H1 from "../headings/H1";
@@ -108,12 +110,16 @@ const CareerItem = ({ item, locale, logoUrl }: CareerItemProps) => {
     end?: string | null,
   ) => {
     if (!start) return "";
-    const startDate = new Date(start);
-    const endDate = end ? addDays(new Date(end), 1) : new Date();
+    const rawStart = new Date(start);
+    const rawEnd = end ? new Date(end) : new Date();
 
-    if (!isValid(startDate) || !isValid(endDate)) return "";
+    if (!isValid(rawStart) || !isValid(rawEnd)) return "";
 
     try {
+      // Normalize dates
+      const startDate = startOfMonth(rawStart);
+      const endDate = addDays(endOfMonth(rawEnd), 1);
+
       const duration = intervalToDuration({ start: startDate, end: endDate });
 
       return formatDuration(duration, { format: ["years", "months"] });
